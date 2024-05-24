@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Form</title>
+	</head>
+	<body>
+		<h2>Login Form</h2>
+		<form action="adminLogin.php" onsubmit="return validate()">
+			<p>
+				<label>Username: </label>
+				<input type="text" id="txtuser" name="txtuser" />
+			</p>
+			<p>
+				<label>Password: </label>
+				<input type="password" id="txtpass" name="txtpass" />
+			</p>
+			<p>
+				<input type="submit" value="Login" />
+				<input type="reset" value="Clear" />
+			</p>
+		</form>
+		<p id="msg"></p>
+		<script type="text/javascript" src="adminLogin.js"></script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="register(event)">
+        <p>
+            <label>First Name: </label>
+            <input type="text" id="firstName" name="firstName" required />
+        </p>
+        <p>
+            <label>Middle Name: </label>
+            <input type="text" id="middleName" name="middleName" />
+        </p>
+        <p>
+            <label>Last Name: </label>
+            <input type="text" id="lastName" name="lastName" required />
+        </p>
+        <p>
+            <label>Sex: </label>
+            <select id="sex" name="sex" required>
+                <option value="None">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </p>
+        <p>
+            <label>Phone Number: </label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required />
+        </p>
+        <p>
+            <label>Username: </label>
+            <input type="text" id="username" name="username" required />
+        </p>
+        <p>
+            <label>Password: </label>
+            <input type="password" id="password" name="password" required />
+        </p>
+            <input type="text" id="idNumber" name="idNumber" style="display: none;" disabled />
+        <p>
+            <input type="submit" value="Register" />
+            <input type="reset" value="Clear" />
+        </p>
+    </form>
+    <p id="msg"></p>
+
+    <form id="editForm" method="POST" action="userEditdata.php" style="display: none;">
+        <input type="hidden" name="editform" value="editform">
+        <p>
+            <label>First Name: </label>
+            <input type="text" id="editfirstName" name="firstName" required />
+        </p>
+        <p>
+            <label>Middle Name: </label>
+            <input type="text" id="editmiddleName" name="middleName" />
+        </p>
+        <p>
+            <label>Last Name: </label>
+            <input type="text" id="editlastName" name="lastName" required />
+        </p>
+        <p>
+            <label>Sex: </label>
+            <select id="editsex" name="sex" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </p>
+        <p>
+            <label>Phone Number: </label>
+            <input type="text" id="editphoneNumber" name="phoneNumber" required />
+        </p>
+        <p>
+            <label>Username: </label>
+            <input type="text" id="editusername" name="username" required />
+        </p>
+        <p>
+            <label>Password: </label>
+            <input type="password" id="editpassword" name="password" required />
+        </p>
+        <label>ID Number:</label>
+        <input type="text" id="editidNumber" name="idNumber" />
+        <button type="submit">Update</button>
+    </form>
+
+    <script src="userSignup.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="adregistrationForm" onsubmit="register(event)">
+        <p>
+            <label>First Name: </label>
+            <input type="text" id="adfirstName" name="adfirstName" required />
+        </p>
+        <p>
+            <label>Middle Name: </label>
+            <input type="text" id="admiddleName" name="admiddleName" />
+        </p>
+        <p>
+            <label>Last Name: </label>
+            <input type="text" id="adlastName" name="adlastName" required />
+        </p>
+        <p>
+            <label>Sex: </label>
+            <select id="adsex" name="adsex" required>
+                <option value="None">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </p>
+        <p>
+            <label>Phone Number: </label>
+            <input type="text" id="adphoneNumber" name="adphoneNumber" required />
+        </p>
+        <p>
+            <label>Username: </label>
+            <input type="text" id="adusername" name="adusername" required />
+        </p>
+        <p>
+            <label>Password: </label>
+            <input type="password" id="adpassword" name="adpassword" required />
+        </p>
+            <input type="text" id="adidNumber" name="adidNumber" style="display: none;"  disabled />
+        <p>
+            <input type="submit" value="Register" />
+            <input type="reset" value="Clear" />
+        </p>
+    </form>
+    <p id="admsg"></p>
+
+    <form id="adeditForm" method="POST" action="adminEditdata.php" style="display: none;">
+        <input type="hidden" name="editform" value="editform">
+        <p>
+            <label>First Name: </label>
+            <input type="text" id="adeditfirstName" name="adfirstName" required />
+        </p>
+        <p>
+            <label>Middle Name: </label>
+            <input type="text" id="adeditmiddleName" name="admiddleName" />
+        </p>
+        <p>
+            <label>Last Name: </label>
+            <input type="text" id="adeditlastName" name="adlastName" required />
+        </p>
+        <p>
+            <label>Sex: </label>
+            <select id="adeditsex" name="adsex" required>
+                <option value="None">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </p>
+        <p>
+            <label>Phone Number: </label>
+            <input type="text" id="adeditphoneNumber" name="adphoneNumber" required />
+        </p>
+        <p>
+            <label>Username: </label>
+            <input type="text" id="adeditusername" name="adusername" required />
+        </p>
+        <p>
+            <label>Password: </label>
+            <input type="password" id="adeditpassword" name="adpassword" required />
+        </p>
+        <label>ID Number:</label>
+        <input type="text" id="adeditidNumber" name="adidNumber"/>
+        <button type="submit">Update</button>
+    </form>
+
+    <script src="adminSignup.js"></script>
+</body>
+</html>
